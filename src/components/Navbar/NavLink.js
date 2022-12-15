@@ -8,21 +8,25 @@ const NavLink = ({ route, name }) => {
     <Link
       as={RouteLink}
       to={route || `/${name.toLowerCase()}`}
+      fontWeight="medium"
+      color={"#4d4747"}
       position={"relative"}
+      transition="color .1s ease"
       _after={{
         content: '""',
         position: "absolute",
-        background: "red",
+        background: "#e12121",
         width: 0,
         height: "2px",
         left: "-25%",
         right: "25%",
         bottom: "-6px",
-        transition: ".3s",
+        transition: ".4s",
       }}
       _hover={{
         _after: { width: "150%" },
         cursor: "pointer",
+        color: "#e12121",
       }}
     >
       {name}

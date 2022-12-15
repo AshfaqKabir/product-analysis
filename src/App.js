@@ -3,14 +3,15 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { CustomerReviews, Dashboard, About, NotFound } from "./pages";
 
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { Route, Router, Routes } from "react-router-dom";
+import SimpleLineChart from "./components/Charts/LineChart";
+import Card from "./components/Review/Card";
 
 function App() {
   return (
     <Box fontFamily={"'Poppins', sans-serif"}>
       <Navbar />
-
       <Routes>
         <Route
           path="/"
