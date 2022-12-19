@@ -5,8 +5,6 @@ import { CustomerReviews, Dashboard, About, NotFound } from "./pages";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { Route, Router, Routes } from "react-router-dom";
-import SimpleLineChart from "./components/Charts/LineChart";
-import Card from "./components/Review/Card";
 
 function App() {
   return (
@@ -25,6 +23,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/reviews" element={<CustomerReviews />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Box>
   );
