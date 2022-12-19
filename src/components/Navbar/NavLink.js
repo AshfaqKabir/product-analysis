@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link as RouteLink } from "react-router-dom";
+import { NavLink as RouteLink } from "react-router-dom";
 import { Link } from "@chakra-ui/react";
 
 const NavLink = ({ route, name }) => {
@@ -26,6 +26,10 @@ const NavLink = ({ route, name }) => {
       _hover={{
         _after: { width: "150%" },
         cursor: "pointer",
+        color: "#e12121",
+      }}
+      _activeLink={{
+        _after: { width: "150%" },
         color: "#e12121",
       }}
     >
