@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from "./components/Navbar/Navbar";
-import { CustomerReviews, Dashboard, About, NotFound } from "./pages";
+import { CustomerReviews, Dashboard, Blogs, NotFound } from "./pages";
 
 import { Box, Text } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
@@ -21,8 +21,7 @@ function App() {
         />
         <Route path="/reviews" element={<CustomerReviews />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/reviews" element={<CustomerReviews />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Box>
