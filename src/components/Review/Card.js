@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Flex, Img, Text } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Card = ({ section, src, name, handle, rating }) => {
+const Card = ({ name, handle, rating, comment, section }) => {
   return (
     <Box
       p={"20px"}
@@ -26,8 +26,11 @@ const Card = ({ section, src, name, handle, rating }) => {
             height={"50px"}
             borderRadius="50%"
             overflow={"hidden"}
+            bg="#eee"
           >
-            <Img src="https://via.placeholder.com/150" />
+            <Img
+              src={`https://avatars.dicebear.com/api/avataaars/${name}.svg`}
+            />
           </Box>
 
           {/* NAME AND HANDLE */}
@@ -38,10 +41,10 @@ const Card = ({ section, src, name, handle, rating }) => {
               letterSpacing={".5px"}
               color={"#3d3d3d"}
             >
-              J.K Rowling {name}
+              {name}
             </Text>
             <Text mt="-2px" fontSize=".8rem" color={"#979797"}>
-              @jkrowling
+              @{handle}
             </Text>
           </Box>
         </Flex>
@@ -95,10 +98,7 @@ const Card = ({ section, src, name, handle, rating }) => {
         textAlign="justify"
         color="#4b4b4b"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-        totam beatae quae et? Voluptates doloremque quibusdam eos voluptate
-        optio excepturi culpa eligendi temporibus. Aliquam, dolorem. Mollitia
-        soluta nam numquam corporis?
+        {comment}
       </Text>
     </Box>
   );

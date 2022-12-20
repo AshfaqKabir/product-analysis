@@ -3,8 +3,8 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { CustomerReviews, Dashboard, About, NotFound } from "./pages";
 
-import { Box, Flex, Text } from "@chakra-ui/react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Box, Text } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Text fontSize={"4xl"} align="center" mt="30px">
+            <Text mt="30px" fontSize={"4xl"} align="center">
               THIS IS HOMEPAGE
             </Text>
           }
